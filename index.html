@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Frontend UI Projects</title>
+
+<style>
+body{
+  margin:0;
+  font-family:'Gill Sans','Gill Sans MT',Calibri,'Trebuchet MS',sans-serif;
+  background:black;
+  color:white;
+}
+
+/* ---------- HEADER ---------- */
+.header{
+  text-align:center;
+  margin:40px 0 60px;
+}
+
+.iconss{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+}
+
+.icon{width:64px;}
+.icon2{width:64px;border-radius: 50%;}
+
+.title{
+  font-size:32px;
+  font-weight:600;
+  margin:0;
+  color: white;
+}
+
+.subtitle{
+  font-size:18px;
+  color:#cfcfcf;
+  margin-top:10px;
+}
+
+/* ---------- GRID ---------- */
+.projects{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:40px;
+  padding:0 60px 80px;
+  justify-items:center;
+}
+
+/* ---------- COMMON CARDS ---------- */
+.border1,.border2,.border3,.border4,.border5,.border6,.border7{
+  background: white;
+  border:2px solid #444;
+  border-radius:8px;
+  color: black;
+  padding:15px;
+  transition:transform .3s ease, box-shadow .3s ease;
+}
+
+.border1:hover,.border2:hover,.border3:hover,.border4:hover,.border5:hover,.border6:hover,.border7:hover{
+  transform:translateY(-6px);
+  box-shadow:0 15px 30px rgba(0,0,0,.3);
+}
+
+.border1,.border2,.border4{width:320px;height:220px;}
+.border3{width:500px;height:340px; margin-left: 650px;}
+.border4{height:230px;}
+.border5{width:400px;height:200px;}
+.border6{width:400px;height:210px;}
+.border7{width:580px;height:340px;margin-left: 220px;}
+
+.Sign,.Sign2{
+  color:black;
+  font-size:18px;
+  margin-bottom:10px;
+}
+
+/* ---------- INPUTS & BUTTONS ---------- */
+input{
+  border-radius:5px;
+  padding:10px;
+  border:1px solid #999;
+  background: black;
+  color: white;
+}
+input::placeholder{
+    color: #bbb;
+}
+.big{width:100px;}
+.box{width:225px;margin:10px 0;}
+.bigger{width:230px;margin-bottom:8px;}
+.para{
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: transparent;
+    
+}
+
+.tweet-button{
+    color:white;
+    background-color: blue;
+    border-radius: 40px;
+    border: none;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 10px;
+    padding-bottom: 12px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 6px;
+    transition: box-shadow 0.15s;
+   
+   }
+   .tweet-button:hover{
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.15);
+   }
+   
+   .link-button{
+    width: 110px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+   }
+.git-button,.AddFriend,.tweet-button,.link-button{
+  background:#2209b2;
+  color:white;
+  border:none;
+  border-radius:6px;
+  height:36px;
+  cursor:pointer;
+  
+}
+
+.git-button{
+width:120px;margin-top:10px;
+transition: box-shadow 0.15s;
+}
+.git-button:hover{
+box-shadow:5px 5px 10px rgba(0,0,0,.15);
+}
+
+.req-button{
+  background:black;color:white;padding:12px;border:none;margin-right:8px;border-radius: 4px;cursor: pointer;
+}
+.reqs-button{
+  background: #b0aeae ;color:black;padding:12px;border:none;border-radius: 4px;cursor: pointer;
+}
+
+/* ---------- GOOGLE UI ---------- */
+.size{width:150px;display:block;margin:10px auto;}
+.Shadow{
+  width:400px;
+  border-radius:50px;
+  padding:14px;
+  box-shadow:5px 5px 10px rgba(0,0,0,.15);
+  border:none;
+  color: black;
+  background: white;
+  margin-left: 30px;
+}
+
+/* ---------- TWITTER ---------- */
+.cat{
+  background:white;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:10px;
+  border-radius:5px;
+  border: 1px;
+  border-style: solid;
+  margin-top: 40px;
+  
+}
+
+.image{
+  width:40px;height:40px;border-radius:50%;object-fit:cover;
+}
+
+.para{
+  border:none;
+  outline:none;
+  font-size:16px;
+  background: white;
+}
+
+/* ---------- CARDS ---------- */
+.Container-Three{
+  width:170px;
+  height: 280px;
+  background:white;
+  border-radius:6px;
+  display:inline-block;
+  margin-right:10px;
+  border: 1px;
+  border-style: solid;
+  background-color: black;
+}
+
+.square{width:170px;height:150px;object-fit:cover;border-radius: 6px;}
+
+.oliver{font-weight:bold;margin:5px;color: white;}
+.grey{color:grey;font-size:14px;margin-left:5px;}
+
+.AddFriend{
+  background:blue;
+  width:100px;
+  margin:5px;
+}
+
+/* ---------- INSTALL CARD ---------- */
+.Container-Two{
+  background:black;
+  color:white;
+  padding:15px;
+  border-radius:5px;
+  border: 1px solid #ccc;
+}
+.p1{color:black;font-size:18px;}
+.p2{color:#b5b5b5;}
+.pa2{
+  padding-top: 20px;
+  color: white;
+  font-size: 16px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding-left: 8px;
+  margin-bottom: 0;
+}
+.tears{
+ margin-bottom: 0;
+}
+.width{
+            width: 45px;
+            height: 20px;
+            display: inline-block;
+            border-radius: 3px;
+            border: none;
+            background-color: white;
+            color: black;
+            margin-left: 8px;
+            cursor: pointer;
+        }
+         .width2{
+            width: 45px;
+            height:20px;
+            display: inline-block;
+            border-radius: 3px;
+            border: none;
+            color: black;
+            background-color: white;
+            margin-top: 30px;
+            cursor: pointer;
+        }
+        .Container-Y{
+          height: 140px;
+          background-color: black;
+          border-radius: 8px;
+        }
+         .border{
+        background-color: rgb(228, 225, 225);
+        color: rgb(14, 2, 2);
+        padding-left: 11px;
+        padding-right: 11px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        margin-bottom: 35px;
+        margin-top: 30px;
+        margin-left: 40px;
+        transition: opacity 0.15s;
+        cursor: pointer;
+        border: none;
+        font-weight:lighter;
+        font-size: 14px;
+        cursor: pointer;
+    }
+    .border:hover{
+        opacity: 0.8;
+    }
+    .border:active{
+        opacity: 0.4;
+   }
+</style>
+<link rel="icon" href="cat3.avif">
+</head>
+
+<body>
+
+<header class="header">
+  <div class="iconss">
+    <img src="htmlicon.webp" class="icon">
+    <h1 class="title">Frontend UI Projects</h1>
+    <img src="Css-logo.png" class="icon2">
+  </div>
+  <p class="subtitle">A collection of UI Components built using HTML & CSS</p>
+</header>
+
+<section class="projects">
+
+<div class="border1">
+  <h3 class="Sign">Sign Up Form</h3>
+  <input class="big" placeholder="First name">
+  <input class="big" placeholder="Last name">
+  <input class="box" placeholder="Email">
+  <button class="git-button">Sign up</button>
+</div>
+
+<div class="border2">
+  <h3 class="Sign">Uber Request Form</h3>
+  <input class="bigger" placeholder="Enter Pickup Location">
+  <input class="bigger" placeholder="Enter Destination">
+  <button class="req-button">Request now</button>
+  <button class="reqs-button">Schedule for later</button>
+</div>
+
+
+<div class="border4">
+  <h3 class="Sign">LinkedIn Sign Up</h3>
+  <p class="tears">Email:</p>
+  <input class="box" placeholder="Enter Your Email">
+  <p style="color:black;font-size:16px; margin-top: 0;width: 250px;">By clicking Agree & Join, you agree to the Privacy Policy.</p>
+  <button class="link-button">Agree & Join</button>
+</div>
+
+<div class="border5">
+  <h3 class="Sign">Youtube</h3>
+  <p class="p1">Install YouTube Music</p>
+  <div class="Container-Two">
+    <p class="p2">Add YouTube Music to your desktop for quick and easy access.</p>
+  </div>
+</div>
+
+
+
+<div class="border5">
+  <h3 class="Sign">Twitter Text Box</h3>
+  <div class="cat">
+    <img src="cat.jpg" class="image">
+    <input class="para" placeholder="What's happening?">
+    <button class="tweet-button">Tweet</button>
+  </div>
+</div>
+
+<div class="border6">
+  <h3 class="Sign">Alert Box</h3>
+  <div style="background:white;border-radius:5px;">
+    <div class="Container-Y">
+    <p class="pa2">Thanks for chatting with our support.<br> Take a quick survey?</p>
+    <button class="width">Yes</button>
+    <button class="width2">No</button>
+    </div>
+  </div>
+</div>
+
+<div class="border7">
+  <h3 class="Sign2">Cards & Layouts</h3>
+  <div class="Container-Three">
+    <img src="cat.jpg" class="square">
+    <p class="oliver">Oliver</p>
+    <p class="grey">2 mutual friends</p>
+    <button class="AddFriend">Add Friend</button>
+  </div>
+
+  <div class="Container-Three">
+    <img src="cat3.avif" class="square">
+    <p class="oliver">Rex</p>
+    <p class="grey">2 mutual friends</p>
+    <button class="AddFriend">Add Friend</button>
+  </div>
+
+  <div class="Container-Three">
+    <img src="cat-2.jpg" class="square">
+    <p class="oliver">Mimi</p>
+    <p class="grey">3 mutual friends</p>
+    <button class="AddFriend">Add Friend</button>
+  </div>
+</div>
+
+<div class="border3">
+  <h3 class="Sign">Google Search UI</h3>
+  <img src="Google-Logo.png" class="size">
+  <input class="Shadow" placeholder="Search Google or type a URL">
+  <button class="border">Google Search</button>
+  <button class="border">I'm feeling lucky</button>
+</div>
+
+</section>
+
+</body>
+</html>
